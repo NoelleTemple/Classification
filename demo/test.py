@@ -1,5 +1,5 @@
-from classification_pkg.classifcation import deepNet
+from classification_pkg.classification import deepNet
 
-obj = deepNet(img = "https://files.slack.com/files-pri/TMTRE2L81-FQ4CAU7FV/image_from_ios.png")
+obj = deepNet(img = "pug.jpg")
 obj.eval()
-print ("Object is {}, {} % sure".format(obj.getname(), obj.getPercent()))
+print ("Object is {}, {} % sure".format(obj.getName(), obj.getPercent()))
