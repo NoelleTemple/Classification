@@ -1,9 +1,9 @@
 from torchvision import models
 import torch
+from torchvision import transforms
+from PIL import Image
 
 alexnet = models.alexnet(pretrained=True)
-
-from torchvision import transforms
 
 transform = transforms.Compose([  # [1]
     transforms.Resize(256),  # [2]
@@ -13,7 +13,6 @@ transform = transforms.Compose([  # [1]
         mean=[0.485, 0.456, 0.406],  # [6]
         std=[0.229, 0.224, 0.225]  # [7]
     )])
-from PIL import Image
 
 img = Image.open("https://cdn.pixabay.com/photo/2018/05/07/10/48/husky-3380548_1280.jpg")
 img_t = transform(img)
